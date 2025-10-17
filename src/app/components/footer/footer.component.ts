@@ -38,7 +38,7 @@ import { RouterModule } from '@angular/router';
         <div class="contact-col">
           <h4>Contact Us</h4>
           <p>PRIME MARKET, New Delhi, India</p>
-          <p>Call Us: <a href="tel:+91-8920114845">+91 8920114845</a></p>
+          <p>Call Us: <a href="tel:+91-9346779850">+91 9346779850</a></p>
           <p>Email: <a href="mailto:support@janidhi.com">support&commat;janidhi.com</a></p>
         </div>
 

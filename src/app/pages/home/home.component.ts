@@ -16,10 +16,10 @@ import { CategoryPipe } from '../../pipes/category.pipe';
       <div>
         <h1>Your Life Span is the Only One That Matters.</h1>
         <p>Rediscover the food culture and habits that reject chemicals, preservatives, and the cost of a shorter, modern life.</p>
-        <div class="hero-actions">
+        <!--<div class="hero-actions">
           <a routerLink="/products" class="btn">Browse Products</a>
           <a routerLink="/cart" class="btn secondary">View Cart</a>
-        </div>
+        </div>-->
       </div>
     </section>
 
