@@ -45,18 +45,7 @@ import { CategoryPipe } from '../../pipes/category.pipe';
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="section vision">
-      <div class="vision-card">
-        <h3>Our Vision</h3>
-        <p>To empower shoppers with curated, sustainable products and a seamless digital experience.</p>
-      </div>
-      <div class="vision-card">
-        <h3>Our Mission</h3>
-        <p>Deliver delightful value through transparency, quality, and customer-first service.</p>
-      </div>
-    </section>
+    
   `,
 })
 export class HomeComponent {

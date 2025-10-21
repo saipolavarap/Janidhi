@@ -58,7 +58,7 @@ export class DashboardComponent {
       totalProducts: products.length,
       cartItems: cart.items.reduce((n, i) => n + i.quantity, 0),
       subtotal: cart.subtotal,
-      recentProducts: [...products].slice(-3).reverse(),
+      recentProducts: [...products].slice(-10).reverse(),
     }))
   );
 

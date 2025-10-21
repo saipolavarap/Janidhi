@@ -33,39 +33,45 @@ import { RouterModule } from '@angular/router';
         </div>
       </div>
 
-      <!-- Main Footer Content -->
-      <div class="footer-inner">
-        <div class="quick-links-col">
-          <h4>Quick Links</h4>
-          <a routerLink="/">Home</a>
-          <a routerLink="/collections">View Collections</a>
-          <a routerLink="/products">Shop All</a>
-          <a routerLink="/faq">FAQ</a>
-          <a routerLink="/track-order">Track Your Order</a>
-          <a routerLink="/contact">Contact Us</a>
-        </div>
-
-        <div class="customer-care-col">
-          <h4>Customer Care</h4>
-          <a routerLink="/faq">FAQ</a>
-          <a routerLink="/shipping">Shipping Policy</a>
-          <a routerLink="/refund">Refund Policy</a>
-          <a routerLink="/cancellation">Cancellation Policy</a>
-          <a routerLink="/privacy">Privacy Policy</a>
-          <a routerLink="/terms">Terms of Service</a>
-          <a routerLink="/contact">Contact Information</a>
-
-        </div>
+      <!-- Links Section (Table style) -->
+      <div class="footer-links-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Quick Links</th>
+              <th>Customer Care</th>
+              <th>Support</th>
+              <th>Legal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a routerLink="/">Home</a>
+                <a routerLink="/track-order">Track Your Order</a>
+              </td>
+              <td>
+                <a routerLink="/faq">FAQ</a>
+                <a routerLink="/contact">Contact Information</a>
+              </td>
+              <td>
+                <a routerLink="/shipping">Shipping Policy</a>
+                <a routerLink="/refund">Refund Policy</a>
+                <a routerLink="/cancellation">Cancellation Policy</a>
+              </td>
+              <td>
+                <a routerLink="/privacy">Privacy Policy</a>
+                <a routerLink="/terms">Terms of Service</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <!-- Copyright Section -->
       <div class="footer-bottom">
         <div class="copyright-info">
           <p>Copyright© {{ year }} Janidhi</p>
-          <p>Built by Ecommified.in</p>
-        </div>
-        <div class="language-selector">
-          <button class="lang-btn">EN <span>▼</span></button>
         </div>
       </div>
     </footer>

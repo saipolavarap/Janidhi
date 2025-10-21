@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ProductService } from '../../services/product.service';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { Product } from '../../models/product.model';
 
 @Component({
@@ -25,7 +25,9 @@ import { Product } from '../../models/product.model';
   `,
 })
 export class ProductsComponent {
-  products$: Observable<Product[]> = this.productService.getProducts();
+  products$: Observable<Product[]> = this.productService.getProducts().pipe(
+    map(list => list.slice(0, 10))
+  );
 
   constructor(private readonly productService: ProductService) {}
 }
