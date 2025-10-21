@@ -7,52 +7,65 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterModule],
   template: `
-    <footer class="footer-blue">
-      <div class="footer-inner grid">
-        <div class="brand-col">
-          <div class="brand-mark">
-            <svg width="140" height="44" viewBox="0 0 280 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="2" y="26" width="40" height="4" rx="2" fill="#fff"/>
-              <circle cx="54" cy="44" r="18" stroke="#fff" stroke-width="6"/>
-              <text x="86" y="53" fill="#fff" font-size="28" font-weight="700">JANIDHI</text>
-            </svg>
+    <footer class="footer-orange">
+      <!-- Janidhi Logo Section -->
+      <div class="footer-logo-section">
+        <div class="janidhi-logo">
+          <svg width="200" height="60" viewBox="0 0 400 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="40" width="60" height="6" rx="3" fill="#fff"/>
+            <circle cx="80" cy="60" r="28" stroke="#fff" stroke-width="8"/>
+            <text x="130" y="75" fill="#fff" font-size="42" font-weight="700" font-family="Arial, sans-serif">JANIDHI</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Mission & Vision Section -->
+      <div class="mission-vision-container">
+        <div class="mission-vision-content">
+          <div class="mission-section">
+            <h3>Our Mission</h3>
+            <p>To provide high-quality, natural products that promote health and wellness while supporting sustainable farming practices and empowering local communities.</p>
           </div>
-          <p class="muted">Best for a Limitless Product Inventory</p>
-          <div class="payments">
-            <span class="pay visa" title="VISA">V</span>
-            <span class="pay mc" title="Mastercard">M</span>
-            <span class="pay paypal" title="PayPal">P</span>
-            <span class="pay amex" title="AmEx">A</span>
+          <div class="vision-section">
+            <h3>Our Vision</h3>
+            <p>To become the leading platform for authentic, farm-fresh products, creating a bridge between conscious consumers and trusted farmers across India.</p>
           </div>
-          <div class="copyright">© {{ year }} Janidhi</div>
+        </div>
+      </div>
+
+      <!-- Main Footer Content -->
+      <div class="footer-inner">
+        <div class="quick-links-col">
+          <h4>Quick Links</h4>
+          <a routerLink="/">Home</a>
+          <a routerLink="/collections">View Collections</a>
+          <a routerLink="/products">Shop All</a>
+          <a routerLink="/faq">FAQ</a>
+          <a routerLink="/track-order">Track Your Order</a>
+          <a routerLink="/contact">Contact Us</a>
         </div>
 
-        <div class="links-col">
-          <h4>My Account</h4>
-          <a routerLink="/about">About Us</a>
+        <div class="customer-care-col">
+          <h4>Customer Care</h4>
+          <a routerLink="/faq">FAQ</a>
+          <a routerLink="/shipping">Shipping Policy</a>
+          <a routerLink="/refund">Refund Policy</a>
+          <a routerLink="/cancellation">Cancellation Policy</a>
           <a routerLink="/privacy">Privacy Policy</a>
-          <a routerLink="/terms">Terms & Conditions</a>
-          <a routerLink="/shipping">Shipping & Returns</a>
-        </div>
+          <a routerLink="/terms">Terms of Service</a>
+          <a routerLink="/contact">Contact Information</a>
 
-        <div class="contact-col">
-          <h4>Contact Us</h4>
-          <p>PRIME MARKET, New Delhi, India</p>
-          <p>Call Us: <a href="tel:+91-9346779850">+91 9346779850</a></p>
-          <p>Email: <a href="mailto:support@janidhi.com">support&commat;janidhi.com</a></p>
         </div>
+      </div>
 
-        <div class="news-col">
-          <h4>Newsletter</h4>
-          <div class="news-form">
-            <input placeholder="Enter Email Address"/>
-            <button aria-label="Subscribe">➤</button>
-          </div>
-          <div class="socials">
-            <a aria-label="Facebook">f</a>
-            <a aria-label="Twitter">t</a>
-            <a aria-label="Instagram">◎</a>
-          </div>
+      <!-- Copyright Section -->
+      <div class="footer-bottom">
+        <div class="copyright-info">
+          <p>Copyright© {{ year }} Janidhi</p>
+          <p>Built by Ecommified.in</p>
+        </div>
+        <div class="language-selector">
+          <button class="lang-btn">EN <span>▼</span></button>
         </div>
       </div>
     </footer>

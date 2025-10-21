@@ -30,7 +30,7 @@ import { CategoryPipe } from '../../pipes/category.pipe';
         <button *ngFor="let c of categories" (click)="activeCategory=c" [class.active]="activeCategory===c">{{ c }}</button>
       </div>
       <h2 style="margin-top:8px">Featured Products</h2>
-      <div class="grid">
+      <div class="grid grid-5">
         <div class="card" *ngFor="let p of (featured$ | async) | category:activeCategory">
           <img [src]="p.imageUrl" [alt]="p.name" />
           <div class="card-body">
@@ -61,7 +61,7 @@ import { CategoryPipe } from '../../pipes/category.pipe';
 })
 export class HomeComponent {
   featured$: Observable<Product[]> = this.productService.getProducts().pipe(
-    map(list => list.slice(0, 3))
+    map(list => list.slice(0, 10))
   );
   categories: string[] = ['All', 'Apparel', 'Accessories', 'Footwear'];
   activeCategory = 'All';

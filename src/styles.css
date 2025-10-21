@@ -32,6 +32,8 @@ a{ color:inherit; text-decoration: none; }
 .container{ max-width: var(--container); margin: 0 auto; padding: 24px; }
 .section{ display:block; }
 .grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: calc(var(--gap) + 4px); }
+/* Fixed 5-column grid for featured section */
+.grid-5{ grid-template-columns: repeat(5, 1fr); }
 .card{ border:1px solid var(--border); border-radius: 16px; overflow: hidden; background:linear-gradient(180deg, #ffffff, #f8fafc); display:block; box-shadow: 0 10px 24px rgba(2, 132, 199, 0.06); transform: translateY(0); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
 .card:hover{ transform: translateY(-2px); box-shadow: 0 16px 36px rgba(2, 132, 199, 0.12); border-color:#bfdbfe; }
 .card img{ width: 100%; height: 200px; object-fit: cover; display:block; }
@@ -92,7 +94,162 @@ a{ color:inherit; text-decoration: none; }
 .footer-inner{ max-width: var(--container); margin:0 auto; display:flex; align-items:center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 .footer-links{ display:flex; gap: 12px; }
 
-/* Blue footer */
+/* Orange footer */
+.footer-orange{ 
+  background: #FF6B35; 
+  color: #fff; 
+  margin-top: 32px; 
+  padding: 0;
+}
+
+/* Logo Section */
+.footer-logo-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px 20px;
+}
+
+.janidhi-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mission & Vision Container */
+.mission-vision-container {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 20px 30px;
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.mission-vision-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mission-section, .vision-section {
+  text-align: center;
+}
+
+.mission-section h3, .vision-section h3 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.mission-section p, .vision-section p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.95;
+}
+
+/* Footer Inner Content */
+.footer-orange .footer-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 20px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.footer-orange h4 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-orange a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 8px 0;
+  font-size: 16px;
+  transition: opacity 0.2s ease;
+}
+
+.footer-orange a:hover {
+  opacity: 0.8;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.copyright-info p {
+  color: #fff;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.language-selector {
+  display: flex;
+  align-items: center;
+}
+
+.lang-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.lang-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mission-vision-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer-orange .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .mission-section h3, .vision-section h3 {
+    font-size: 20px;
+  }
+  
+  .mission-section p, .vision-section p {
+    font-size: 14px;
+  }
+}
+
+/* Legacy Blue footer styles for backward compatibility */
 .footer-blue{ background:#2563eb; color:#fff; margin-top: 32px; }
 .footer-blue .footer-inner{ max-width: var(--container); margin:0 auto; padding: 28px 20px; display:grid; grid-template-columns: 2fr 1fr 1.2fr 1.4fr; gap: 24px; }
 .footer-blue h4{ margin:0 0 10px; }
